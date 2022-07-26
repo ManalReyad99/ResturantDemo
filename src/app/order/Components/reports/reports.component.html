@@ -1,0 +1,62 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">المشتركين</div>
+    <div class="page__content shadow p-3 position-relative">
+        <button  class="btn btn-secondary m-1" (click)="Back()"> << </button>
+
+        <div class="py-1 mt-1">
+
+            <div class="d-flex search col-lg-4 col-md-12 col-sm-12 col-12">
+                <input class="form-control me-2" type="search" placeholder="بحث" aria-label="Search"
+                    [(ngModel)]="subscriberPhone">
+                <button class="btn " type="submit">بحث</button>
+            </div>
+
+
+            <div class="header_fixed ">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>رقم المشترك</th>
+                            <th>الإسم</th>
+                            <th>رقم الجوال</th>
+                            <th>تاريخ بدء الإشتراك</th>
+                            <th>تاريخ الإنتهاء</th>
+                            <th>نوع الإشتراك</th>
+                            <th>الكميه المتبقيه</th>
+                            <th>جزء التحكم</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let subscriber of SubscribersList | filter:subscriberPhone  let i=index ">
+                            <td>{{i+1}}</td>
+                            <td>{{subscriber.name}}</td>
+                            <td>{{subscriber.phoneNumber}}</td>
+                            <td>{{subscriber.startDate|date:'yyyy-MM-dd'}}</td>
+                            <td>{{subscriber.endDate|date:'yyyy-MM-dd'}}</td>
+                            <td>{{subscriber.numberOfMail}}</td>
+                            <td>{{subscriber.remainingQuantity}}</td>
+                            <td>
+                                <button type="button" class="btn btn-secondary m-2 "
+                                    routerLink="/OrderPage/editSubscriber/{{subscriber.id}}"><i class="fa fa-edit"
+                                        style="font-size: 25px;"></i> </button>
+
+                                <button type="button" class="btn btn-secondary m-2 "
+                                    routerLink="/OrderPage/details/{{subscriber.id}}"><i
+                                        class="fas fa-info"></i></button>
+
+                                <button type="button" class="btn btn-secondary m-2 " role="button"
+                                    (click)="Delete(subscriber.id)">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div>

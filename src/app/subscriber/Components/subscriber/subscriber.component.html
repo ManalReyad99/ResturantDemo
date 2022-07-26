@@ -1,0 +1,92 @@
+<!-- <section class="" style="padding: 40px;"> -->
+  <div class="container-fluid page">
+  <div class="d-flex page__box p-3 mt-2">إضافة مشترك</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="py-1 mt-1">
+  
+        <div *ngIf="alert" class="alert alert-success alert-dismissable fade show" role="alert">
+             تم إضافة مشترك بنجاح
+            
+            </div>
+                   
+            <form class="" [formGroup]="addSubscriber" (ngSubmit)="addSubscriberData()">
+                  <div class="container">
+                  <div class="row">
+                 
+                    <div class="col-md-6  col-lg-6 col-sm-12 col-12">
+                      <label for="subscriberName" class="form-label"> اسم المشترك</label>
+                      <input type="text" class="form-control" id="subscriberName" formControlName="subscriberName"
+                      [class.is-invalid]="addSubscriber.get('subscriberName')?.invalid && addSubscriber.get('subscriberName')?.touched "/>
+                      <small class="text-danger"
+                      [class.d-none]="addSubscriber.get('subscriberName')?.valid || addSubscriber.get('subscriberName')?.untouched">
+                       مطلوب*</small>
+                    </div>
+
+                    <div class="col-md-6 col-lg-6 col-sm-12 col-12">
+                      <label for="phone" class="form-label">رقم الجوال</label>
+                      <input type="text" class="form-control" id="phone" formControlName="subscriberPhone"
+                      [class.is-invalid]="addSubscriber.get('subscriberPhone')?.invalid && addSubscriber.get('subscriberPhone')?.touched "/>
+
+                      <small class="text-danger"
+                      [class.d-none]="addSubscriber.get('subscriberPhone')?.valid || addSubscriber.get('subscriberPhone')?.untouched">
+                       مطلوب*</small>
+                    </div>
+
+                    <div class="col-md-6 col-lg-6 col-sm-12 col-12">
+                      <label for="inputEmail4" class="form-label"> إلي</label>
+                      <input type="date" class="form-control" id="inputEmail4" formControlName="endDate"
+                      [class.is-invalid]="addSubscriber.get('endDate')?.invalid && addSubscriber.get('endDate')?.touched "/>
+
+                      <small class="text-danger"
+                      [class.d-none]="addSubscriber.get('endDate')?.valid || addSubscriber.get('endDate')?.untouched">
+                       مطلوب*</small>
+                    </div>
+                   
+                 
+                    <div class="col-md-6 col-lg-6 col-sm-12 col-12">
+                      <label for="inputEmail4" class="form-label"> من</label>
+                      <input type="date" class="form-control" id="inputEmail4" formControlName="startDate"
+                      [class.is-invalid]="addSubscriber.get('startDate')?.invalid && addSubscriber.get('startDate')?.touched "/>
+
+                      <small class="text-danger"
+                      [class.d-none]="addSubscriber.get('startDate')?.valid || addSubscriber.get('startDate')?.untouched">
+                       مطلوب*</small>
+                    </div>
+
+                   
+
+
+                    <div class="col-md-6 col-lg-6 col-sm-12 col-12">
+                      <label for="inputEmail4" class="form-label"> نوع الإشتراك</label>
+                      <input type="number" class="form-control" id="inputEmail4" formControlName="monthSubscribeType"
+                      [class.is-invalid]="addSubscriber.get('monthSubscribeType')?.invalid && addSubscriber.get('monthSubscribeType')?.touched "/>
+                      <small class="text-danger"
+                      [class.d-none]="addSubscriber.get('monthSubscribeType')?.valid || addSubscriber.get('monthSubscribeType')?.untouched">
+                       مطلوب*</small>
+                    </div>
+
+                    
+
+
+                  </div>
+                </div>
+
+                    <div class="btn_container">
+                      <button type="submit" class="btn btn-light btn-lg">تسجيل</button>
+                    </div>
+                 
+                
+                </form>
+      </div>
+              
+    </div>
+  </div>
+  
+
+  <!-- <app-snipper></app-snipper> -->
+ 
+  
+        
+
+
+

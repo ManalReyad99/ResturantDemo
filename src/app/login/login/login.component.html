@@ -1,0 +1,16 @@
+<div class="background">
+  <div class="shape"></div>
+  <div class="shape"></div>
+</div>
+<form [formGroup]="LoginForm" (ngSubmit)="login()">
+  <h3>تسجيل الدخول</h3>
+
+  <label for="username">اسم المستخدم</label>
+  <input type="text" placeholder="ادخل اسم المستخدم" id="username" formControlName="username">
+
+  <label for="password">كلمة المرور</label>
+  <input type="password" placeholder="ادخل كلمةالمرور" id="password" formControlName="password">
+
+  <button type="submit" class="b">تسجيل الدخول</button>
+  
+</form>

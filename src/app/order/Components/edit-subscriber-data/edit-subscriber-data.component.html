@@ -1,0 +1,78 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">تعديل بيانات المشترك</div>
+    <div class="page__content shadow p-3 position-relative">
+      <button  class="btn btn-secondary m-1" (click)="Back()"> << </button>
+
+      <div class="py-1 mt-1">
+  
+        <div *ngIf="alert" class="alert alert-success alert-dismissable fade show" role="alert">
+             تم تعديل البيانات بنجاح!
+            
+            </div>
+            
+            <form [formGroup]="EditSubscriberData" (ngSubmit)="Edit()">
+                <div class="mb-3">
+                  <label for="pName" class="form-label">الأسم</label>
+                  <input type="text" formControlName="name" 
+                    class="form-control" name="pName" id="PName" placeholder="" required
+                    [class.is-invalid]="EditSubscriberData.get('name')?.invalid && EditSubscriberData.get('name')?.touched "/>
+                    <small class="text-danger"
+                    [class.d-none]="EditSubscriberData.get('name')?.valid || EditSubscriberData.get('name')?.untouched">
+                     مطلوب*</small>
+                 </div>
+  
+                 <div class="mb-3">
+                  <label for="phonenumber" class="form-label">رقم الجوال</label>
+                  <input type="text" formControlName="phoneNumber" 
+                    class="form-control" name="phoneNumber" id="phonenumber" placeholder="" required
+                    [class.is-invalid]="EditSubscriberData.get('phoneNumber')?.invalid && EditSubscriberData.get('phoneNumber')?.touched ">
+                    <small class="text-danger"
+                    [class.d-none]="EditSubscriberData.get('phoneNumber')?.valid || EditSubscriberData.get('phoneNumber')?.untouched">
+                    مطلوب*</small>
+                 </div>
+  
+  
+  
+                <div class="mb-3">
+                  <label for="startDate" class="form-label">تاريخ بدء الإشتراك</label>
+                  <input type="date" formControlName="startDate"
+                    class="form-control" name="startDate" id="startDate" placeholder=""required
+                    [class.is-invalid]="EditSubscriberData.get('startDate')?.invalid && EditSubscriberData.get('startDate')?.touched " >
+                    <small class="text-danger"
+                    [class.d-none]="EditSubscriberData.get('startDate')?.valid || EditSubscriberData.get('startDate')?.untouched">
+                    مطلوب*</small>
+                </div>
+
+                <div class="mb-3">
+                    <label for="endDate" class="form-label">تاريخ إنتهاء الإشتراك</label>
+                    <input type="date" formControlName="endDate"
+                      class="form-control" name="endDate" id="endDate" placeholder=""required
+                      [class.is-invalid]="EditSubscriberData.get('endDate')?.invalid && EditSubscriberData.get('endDate')?.touched " >
+                      <small class="text-danger"
+                      [class.d-none]="EditSubscriberData.get('endDate')?.valid || EditSubscriberData.get('endDate')?.untouched">
+                      مطلوب*</small>
+                  </div>
+  
+                <div class="mb-3">
+                  <label for="subscribtionType" class="form-label">نوع باقة الإشتراك</label>
+                  <input type="number" formControlName="numberOfMail"
+                    class="form-control" name="subscribtionType" id="subscribtionType" placeholder=""
+                    [class.is-invalid]="EditSubscriberData.get('numberOfMail')?.invalid && EditSubscriberData.get('numberOfMail')?.touched " >
+                    <small class="text-danger"
+                    [class.d-none]="EditSubscriberData.get('numberOfMail')?.valid || EditSubscriberData.get('numberOfMail')?.untouched">
+                    مطلوب*</small>
+                </div>
+               
+               
+    
+                <button type="submit" class="btn btn-success" >حفظ</button>
+              </form>
+
+    </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  

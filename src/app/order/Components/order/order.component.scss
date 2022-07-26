@@ -1,0 +1,96 @@
+@media (min-width: 1025px) {
+    .h-custom {
+    height: 100vh !important;
+    }
+    }
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+    
+    .gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #a1c4fd;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background-color: white;
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: white;
+    }
+    
+    .bg-indigo {
+    background-color: #2b2d42;
+    }
+    @media (min-width: 992px) {
+    .card-registration-2 .bg-indigo {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    }
+    }
+    @media (max-width: 991px) {
+    .card-registration-2 .bg-indigo {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    }
+    }
+
+
+    .page {
+        color: white;
+        padding: 0 1rem;
+        background: #f1f5f9;
+        &__box {
+          min-height: 120px;
+          background: #1e293b;
+          margin: 0 -1rem;
+          font-size: 36px;
+        }
+        &__content {
+          min-height: calc(100vh - 178px);
+          border-radius: 10px;
+          margin-top: -2rem;
+          background: white;
+          color: black;
+          font-size: 1rem;
+          &-data {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+      
+    .btn_container{
+      justify-content: center;
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-top: 40px;
+    }
+    .btn{
+      background-color: #316B83;
+    color: white; 
+    justify-content: center;
+    text-align: center;
+    }
+  .remaining_Quantity{
+     background-color: #1e293b;; 
+     height: 20px;
+     border-radius: 20px;
+     height: 100px;
+     color: white;
+  
+  }
+  .form-label{
+    justify-content: center;
+    text-align: center;
+    padding-right: 20px;
+    padding-top: 10px;
+    font-size: 25px;
+  }

@@ -1,0 +1,116 @@
+<div class="container-fluid page">
+  <div class="d-flex page__box p-3 mt-2">السحب</div>
+  <div class="page__content shadow p-3 position-relative">
+    <button  class="btn btn-secondary m-1" (click)="Back()"> << </button>
+
+      <div class="py-1 mt-1">
+<!-- <section class="gradient-custom-2 ">
+  <div class="container py-5 ">
+    <div class="row justify-content-center align-items-center ">
+      <div class="col-12">
+        <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+          <div class="card-body p-0"> -->
+            <!-- <div class="row g-0">
+              <div class="col-lg-12"> -->
+
+                <form class="" style="justify-content:center;" [formGroup]="orderData" (ngSubmit)="addOrder()">
+
+               
+                   <div class="container">
+                    <div class="row">
+                      <div class="col-md-6  col-lg-6 col-sm-12 col-12">
+                          <label class="form-label" for="form3Examplev2">رقم الجوال</label>
+                          <input type="text" id="form3Examplev2" class="form-control form-control-lg"
+                            formControlName="phone"
+                            [class.is-invalid]="orderData.get('phone')?.invalid && orderData.get('phone')?.touched "/>
+                            
+                            <small class="text-danger"
+                            [class.d-none]="orderData.get('phone')?.valid || orderData.get('phone')?.untouched">
+                             مطلوب*</small>
+                             <div *ngIf="phone.errors?.['pattern']">
+                              رقم التليفون غير صحيح
+                         </div> 
+                        </div>
+
+                            <div class="col-md-6  col-lg-6 col-sm-12 col-12">
+                                <label class="form-label" for="form3Examplev4">كمية السحب</label>
+                                <input id="form1" min="1" name="quantity" value="1" type="number"
+                                  class="form-control form-control-sm" formControlName="quantity" 
+                                  [class.is-invalid]="orderData.get('quantity')?.invalid && orderData.get('quantity')?.touched "/>
+                            
+                                  <small class="text-danger"
+                                  [class.d-none]="orderData.get('quantity')?.valid || orderData.get('quantity')?.untouched">
+                                   مطلوب*</small>
+                            </div>
+                            
+                            <div class="col-md-6  col-lg-6 col-sm-12 col-12">
+                              <label for="orderDate" class="form-label"> تاريخ السحب</label>
+                              <input type="date" class="form-control" id="orderDate" formControlName="orderDate"
+                              [class.is-invalid]="orderData.get('orderDate')?.invalid && orderData.get('orderDate')?.touched "/>
+                            
+                              <small class="text-danger"
+                              [class.d-none]="orderData.get('orderDate')?.valid || orderData.get('orderDate')?.untouched">
+                               مطلوب*</small>
+                            </div>
+                       
+                            
+                            <div class="col-md-6  col-lg-6 col-sm-12 col-12">  
+                            <label class="form-label" for="form3Examplev4">نوع الوجبه</label>
+                            <ng-multiselect-dropdown
+                            [placeholder]="'حدد نوع الوجبات'"
+                            [settings]="MealsTypeDropdownList"
+                            [data]="mealsTypeList"
+                            formControlName="mealsType">
+                            [class.is-invalid]="orderData.get('mealsType')?.invalid && orderData.get('mealsType')?.touched "
+
+                            </ng-multiselect-dropdown>
+                            
+                            <small class="text-danger"
+                            [class.d-none]="orderData.get('mealsType')?.valid || orderData.get('mealsType')?.untouched">
+                             مطلوب*</small>
+                          </div>
+                          
+                          <div class="col-md-6  col-lg-6 col-sm-12 col-12"> 
+                            <label for="inputState" class="form-label">اضافات</label>
+                            <ng-multiselect-dropdown
+                            [placeholder]="'إضافات'"
+                            [settings]="AddtionsDropdownList"
+                            [data]="additionsList"
+                            formControlName="otherAdditons">
+                           </ng-multiselect-dropdown>
+                          </div>
+
+                            <div>
+                            </div>
+                          </div>
+                      </div>
+                 
+                 
+
+                    <div class="btn_container">
+                      <button type="submit" class="btn btn-light btn-lg">اسحب</button>
+                        
+                    </div>
+
+
+                    
+               
+                </form>
+
+              <div class="col-md-12  col-lg-12 col-sm-12 col-12">
+                <div class="remaining_Quantity">
+                  <label class="form-label" for="form3Examplev4">الكمية المتبقية:</label>
+                  <span>{{remainingQuantity}}</span>
+                </div>
+
+              </div>
+              </div>
+            </div>
+         
+        <!-- </div>
+      </div>
+    </div>
+  </div> -->
+<!-- </section> -->
+      </div>
+  

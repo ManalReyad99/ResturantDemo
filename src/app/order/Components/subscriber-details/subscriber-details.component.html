@@ -1,0 +1,46 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2"> أوردرات {{currentSubscriberData.name}} </div>
+    <div class="page__content shadow p-3 position-relative">
+        <button  class="btn btn-secondary m-1" (click)="Back()"> << </button>
+
+        <div class="py-1 mt-1">
+
+<div class="header_fixed ">
+    <table>
+        <thead>
+            <tr>
+                <th>رقم الأوردر</th>
+                <th>رقم الجوال</th>
+                <th>تاريخ  السحب</th>
+                <th>عدد الوجبات المسحوبه</th>
+                <th>عدد الوجبات المتبقيه</th>
+                <th> نوع الوجبات المسحوبه</th>
+                <th>الأضافات</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of subscriberOrderList; let i=index;" >
+                    <td>{{i+1}}</td>
+                    <td >{{currentSubscriberData.phoneNumber}}</td>
+                    <td>{{order.orderDate|date:'yyyy-MM-dd'}}</td>
+                    <td>{{order.quantity}}</td>
+                    <td>{{order.remaining_Quantity}}</td>
+                    <td><div *ngFor="let meal of order.mealTypes">
+                        <span>{{meal.name}}</span>
+                    </div></td>
+                    <td><div *ngFor="let meal of order.other_meals" >
+                        <span> {{meal.mealName}}</span>
+                    </div> </td>
+         
+                    
+               
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+</div>
+</div>
+</div>
